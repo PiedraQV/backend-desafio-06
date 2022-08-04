@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio</title>
+  </head>
+  <body>
+        <h1>
+          Fractal Store
+        </h1>
+    <div>
+      <div style="margin-top: 50px">
+        <form onSubmit=" return otroNombre()">
+          <div>
+            <label for="inputName" >Nombre</label>
+            <div >
+              <input
+                type="text"
+                id="inputName"
+                name="Titulo"
+                placeholder="Nombre del producto"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="inputPrice">Precio</label>
+            <div>
+              <input
+                type="number"
+                id="inputPrice"
+                name="precio"
+                placeholder="Precio del producto"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="inputThumb">Foto del Producto</label
+            >
+            <div>
+              <input
+                type="text"
+                id="inputThumb"
+                name="thumbnail"
+                placeholder="URL del producto"
+              />
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <br>
+              <button type="submit">Añadir</button>
+              <br>
+            </div>
+          </div>
+        </form>
+        <hr />
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Thumbnail</th>
+              </tr>
+            </thead>
+            <tbody id="tabla"></tbody>
+          </table>
+        </div>
+      </div>
+      <hr />
+      <form onSubmit="return addMsg()">
+        <input type="email" placeholder="Añade tu email" id="inputNombre" />
+        <input type="text" placeholder="Escribe tu mensaje" id="inputMensaje" />
+        <input type="submit" value="Enviar"/>
+      </form>
+
+      <div id="chat"></div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
